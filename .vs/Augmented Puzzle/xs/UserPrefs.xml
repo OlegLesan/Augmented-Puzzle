@@ -1,5 +1,4 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
   <DisabledProjects>
     <String>Assembly-CSharp-Editor.csproj</String>
@@ -8,9 +7,10 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Library/PackageCache/com.ptc.vuforia.engine@c33a8d5b6101/Vuforia/Editor/Scripts/VuforiaEditorScripts.asmdef">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Editor/BuildPreparer.cs">
     <Files>
-      <File FileName="Library/PackageCache/com.ptc.vuforia.engine@c33a8d5b6101/Vuforia/Editor/Scripts/VuforiaEditorScripts.asmdef" Line="1" Column="1" />
+      <File FileName="Library/PackageCache/com.ptc.vuforia.engine@c33a8d5b6101/Vuforia/Editor/Scripts/VuforiaEditorScripts.asmdef" />
+      <File FileName="Assets/Editor/BuildPreparer.cs" Line="18" Column="30" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -20,4 +20,5 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>
