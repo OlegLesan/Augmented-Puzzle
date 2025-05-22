@@ -43,12 +43,6 @@ public class VideoController : MonoBehaviour
         {
             PlayAnimation();
         }
-
-        // Видео больше не останавливаем при потере трекинга
-        // else if (targetStatus.Status == Status.NO_POSE)
-        // {
-        //     ResetState();
-        // }
     }
 
     private void PlayAnimation()
@@ -76,11 +70,9 @@ public class VideoController : MonoBehaviour
         }
     }
 
-    private void ResetState()
-    {
-        // Ничего не сбрасываем кроме анимации, если хочешь повторно играть
-        hasPlayedAnimation = false;
-        // videoStarted остаётся true
-        // videoPlayer не останавливаем
-    }
+   
+
+
+
+
 }
