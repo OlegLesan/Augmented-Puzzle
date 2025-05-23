@@ -1,17 +1,16 @@
-Shader "Custom/DarkTransparent"
+Shader "Custom/DarkOnlyOtherLayers"
 {
     Properties
     {
-        _Color ("Color", Color) = (0,0,0,0.7)
+        _Color ("Main Color", Color) = (0,0,0,0.85)
     }
     SubShader
     {
-        Tags { "Queue"="Transparent" "RenderType"="Transparent" }
+        Tags { "Queue"="Background" "RenderType"="Transparent" }
         LOD 100
-
-        // Двусторонний рендеринг
-        Cull Off
         ZWrite Off
+        Lighting Off
+        Cull Off
         Blend SrcAlpha OneMinusSrcAlpha
 
         Pass
