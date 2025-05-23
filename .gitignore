@@ -6,3 +6,12 @@ UserSettings/
 .vs/Augmented Puzzle/FileContentIndex/be098ca3-1d0c-44c2-b5de-2ee40899b2cc.vsidx
 Packages/com.ptc.vuforia.engine-11.2.4.tgz
 .vs/
+Assets/Knife/Customizable Hologramm Shader/Models/boiler.FBX
+Assets/Knife/Customizable Hologramm Shader/Models/boiler.FBX.meta
+*.unitypackage
+Assets/Knife/Customizable Hologramm Shader/Models/tunnel.fbx
+Assets/Knife/Customizable Hologramm Shader/Textures/Terrain Normal.png
+Assets/Knife/Customizable Hologramm Shader/Textures/KnifeMan_1-1_KnifeMan_Normal 1.png
+Assets/Knife/Customizable Hologramm Shader/Textures/Boiler/hologram low 1_DefaultMaterial_SpecularSmoothness.png
+Assets/Knife/Customizable Hologramm Shader/Textures/Boiler/hologram low 1_DefaultMaterial_Normal.png.meta
+Assets/Knife/Customizable Hologramm Shader/Textures/Boiler/hologram low 1_DefaultMaterial_Normal.png
