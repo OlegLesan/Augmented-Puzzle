@@ -9,6 +9,7 @@ public class SceneOrientationManager : MonoBehaviour
     {
         public string sceneName;
         public ScreenOrientation orientation;
+        public bool allowBothLandscapeSides; // Новое поле
     }
 
     public List<SceneOrientation> sceneOrientations;
@@ -30,8 +31,22 @@ public class SceneOrientationManager : MonoBehaviour
         {
             if (so.sceneName == scene.name)
             {
-                Screen.orientation = so.orientation;
-                Debug.Log($"Установлена ориентация: {so.orientation} для сцены {scene.name}");
+                if (so.allowBothLandscapeSides && so.orientation == ScreenOrientation.LandscapeLeft)
+                {
+                    Screen.orientation = ScreenOrientation.AutoRotation;
+                    Screen.autorotateToLandscapeLeft = true;
+                    Screen.autorotateToLandscapeRight = true;
+
+                    Screen.autorotateToPortrait = false;
+                    Screen.autorotateToPortraitUpsideDown = false;
+
+                    Debug.Log($"Горизонтальная ориентация с обеих сторон активна для сцены {scene.name}");
+                }
+                else
+                {
+                    Screen.orientation = so.orientation;
+                    Debug.Log($"Установлена ориентация: {so.orientation} для сцены {scene.name}");
+                }
                 break;
             }
         }
