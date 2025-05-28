@@ -1671,6 +1671,10 @@ PrefabInstance:
       value: Video
       objectReference: {fileID: 0}
     - target: {fileID: 6858939104201176699, guid: 992b66f7a645e6c43924d4143d35e4da, type: 3}
+      propertyPath: m_VideoClip
+      value: 
+      objectReference: {fileID: 32900000, guid: 9823eaf7c1382ee498f5c87af4542bc2, type: 3}
+    - target: {fileID: 6858939104201176699, guid: 992b66f7a645e6c43924d4143d35e4da, type: 3}
       propertyPath: m_DataSource
       value: 0
       objectReference: {fileID: 0}
