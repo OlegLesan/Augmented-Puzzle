@@ -20,79 +20,79 @@ MonoBehaviour:
     - "B. Un parc de distrac\u021Bii"
     - "C. O vin\u0103rie sub p\u0103m\xE2nt"
     - "D. Un magazin de juc\u0103rii"
-    answerScores: 00000000000000000100000000000000
+    correctAnswerIndex: 2
   - questionText: "2. Unde se afl\u0103 Vin\u0103ria Cricova?"
     answers:
     - "A. \xCEntr-o pe\u0219ter\u0103 din mun\u021Bi"
     - "B. \xCEn ora\u0219ul Cricova, aproape de Chi\u0219in\u0103u"
     - "C. Pe o insul\u0103"
     - "D. \xCEntr-un castel din Italia"
-    answerScores: 00000000010000000000000000000000
+    correctAnswerIndex: 1
   - questionText: "3. Ce se p\u0103streaz\u0103 \xEEn tunelurile de la Cricova?"
     answers:
     - "A. Fructe \u0219i legume"
     - "B. Juc\u0103rii \u0219i dulciuri"
     - C. Sticle de vin
     - "D. P\u0103s\u0103ri \u0219i animale"
-    answerScores: 00000000000000000100000000000000
+    correctAnswerIndex: 2
   - questionText: "4. C\xE2t de lungi sunt tunelurile de la Cricova?"
     answers:
     - A. 5 metri
     - B. 100 metri
     - C. 120 kilometri
     - D. 3 kilometri
-    answerScores: 00000000000000000100000000000000
+    correctAnswerIndex: 2
   - questionText: "5. Cum te po\u021Bi plimba prin Cricova?"
     answers:
     - A. Cu trotineta
     - B. Cu bicicleta
     - "C. Cu ma\u0219inu\u021Be speciale"
     - D. Pe cal
-    answerScores: 00000000000000000100000000000000
+    correctAnswerIndex: 2
   - questionText: "6. Ce este \u201Ecolec\u021Bia de aur\u201D de la Cricova?"
     answers:
     - A. Un dulap cu bijuterii
     - "B. O camer\u0103 plin\u0103 cu juc\u0103rii"
     - "C. O colec\u021Bie rar\u0103 de vinuri"
     - D. Un loc cu stele aurii
-    answerScores: 00000000000000000100000000000000
+    correctAnswerIndex: 2
   - questionText: "7. Ce temperatur\u0103 este \xEEn tunelurile de la Cricova?"
     answers:
     - A. Ca la soare, foarte cald
     - B. Aproximativ 12 grade tot anul
     - C. Foarte frig, ca iarna
     - "D. Fierbinte ca \xEEn de\u0219ert"
-    answerScores: 00000000010000000000000000000000
+    correctAnswerIndex: 1
   - questionText: "8. Ce putem \xEEnv\u0103\u021Ba vizit\xE2nd Cricova?"
     answers:
     - "A. S\u0103 g\u0103tim dulciuri"
     - "B. Despre istoria vinului \u0219i cum se p\u0103streaz\u0103"
     - "C. S\u0103 desen\u0103m animale"
     - "D. S\u0103 ne juc\u0103m cu robo\u021Bi"
-    answerScores: 00000000010000000000000000000000
+    correctAnswerIndex: 1
   - questionText: 9. Ce culoare pot avea vinurile de la Cricova?
     answers:
     - "A. Verde \u0219i albastru"
     - "B. Ro\u0219u, alb \u0219i roz"
     - "C. Portocaliu \u0219i negru"
     - D. Numai transparent
-    answerScores: 00000000010000000000000000000000
+    correctAnswerIndex: 1
   - questionText: "10. Cine a vizitat Cricova dintre oamenii importan\u021Bi?"
     answers:
     - A. Un astronaut
     - B. Un magician
     - "C. Vladimir Putin \u0219i Angela Merkel"
     - D. Un fotbalist celebru
-    answerScores: 00000000000000000100000000000000
+    correctAnswerIndex: 2
   results:
-  - minPercentage: 80
+  - minCorrectAnswers: 9
     resultText: "E\u0219ti un mic explorator Cricova!"
-  - minPercentage: 50
+  - minCorrectAnswers: 7
     resultText: "Cuno\u0219ti multe lucruri interesante despre Cricova. Mai cite\u0219te
       un pic \u0219i o s\u0103 devii expert!"
-  - minPercentage: 25
+  - minCorrectAnswers: 4
     resultText: "Se vede c\u0103 \u021Bi-a pl\u0103cut testul. Mai f\u0103 o vizit\u0103
       la Cricova \u0219i o s\u0103 afli \u0219i mai multe lucruri curioase!"
-  - minPercentage: 0
+  - minCorrectAnswers: 0
     resultText: "To\u021Bi \xEEncepem de undeva. Acum \u0219tii c\xE2teva lucruri
       noi despre Cricova. Po\u021Bi relua testul oric\xE2nd!"

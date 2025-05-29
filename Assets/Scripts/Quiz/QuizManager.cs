@@ -1,6 +1,7 @@
-using UnityEngine;
+п»їusing UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
 
 public class QuizManager : MonoBehaviour
 {
@@ -10,21 +11,33 @@ public class QuizManager : MonoBehaviour
     public Button[] answerButtons;
     public TMP_Text resultText;
 
-    public GameObject questionPanel; // панель с вопросом и кнопками
-    public GameObject resultPanel;   // панель с текстом результата
+    public GameObject questionPanel;
+    public GameObject resultPanel;
 
     private int currentQuestion = 0;
-    private int totalScore = 0;
+    private int correctAnswers = 0;
+    private bool isAnswering = false;
+
+    private Color[] originalButtonColors; // СЃРѕС…СЂР°РЅСЏРµРј С†РІРµС‚Р° РёР· РёРЅСЃРїРµРєС‚РѕСЂР°
 
     void Start()
     {
-        resultPanel.SetActive(false); // скрываем результат
-        questionPanel.SetActive(true); // показываем панель с вопросами
+        // РЎРѕС…СЂР°РЅСЏРµРј РЅР°С‡Р°Р»СЊРЅС‹Рµ С†РІРµС‚Р° РєРЅРѕРїРѕРє
+        originalButtonColors = new Color[answerButtons.Length];
+        for (int i = 0; i < answerButtons.Length; i++)
+        {
+            originalButtonColors[i] = answerButtons[i].GetComponent<Image>().color;
+        }
+
+        resultPanel.SetActive(false);
+        questionPanel.SetActive(true);
         ShowQuestion();
     }
 
     void ShowQuestion()
     {
+        isAnswering = true;
+
         if (currentQuestion >= quizData.questions.Count)
         {
             ShowResult();
@@ -36,38 +49,79 @@ public class QuizManager : MonoBehaviour
 
         for (int i = 0; i < answerButtons.Length; i++)
         {
-            answerButtons[i].GetComponentInChildren<TMP_Text>().text = q.answers[i];
+            TMP_Text txt = answerButtons[i].GetComponentInChildren<TMP_Text>();
+            txt.text = q.answers[i];
 
-            int score = q.answerScores[i];
+            // РЎР±СЂРѕСЃ С†РІРµС‚Р° Рё РјР°СЃС€С‚Р°Р±Р°
+            answerButtons[i].GetComponent<Image>().color = originalButtonColors[i];
+            answerButtons[i].transform.localScale = Vector3.one;
+
+            int index = i;
             answerButtons[i].onClick.RemoveAllListeners();
-            answerButtons[i].onClick.AddListener(() => OnAnswer(score));
+            answerButtons[i].onClick.AddListener(() => OnAnswerSelected(index));
         }
     }
 
-    void OnAnswer(int score)
+    void OnAnswerSelected(int selectedIndex)
     {
-        totalScore += score;
+        if (!isAnswering) return;
+        isAnswering = false;
+
+        var q = quizData.questions[currentQuestion];
+        bool isCorrect = selectedIndex == q.correctAnswerIndex;
+
+        if (isCorrect)
+            correctAnswers++;
+
+        for (int i = 0; i < answerButtons.Length; i++)
+        {
+            Image btnImage = answerButtons[i].GetComponent<Image>();
+            Transform btnTransform = answerButtons[i].transform;
+
+            // РџРѕРґСЃРІРµС‚РєР° РїСЂР°РІРёР»СЊРЅРѕР№/РЅРµРїСЂР°РІРёР»СЊРЅРѕР№
+            if (i == q.correctAnswerIndex)
+            {
+                btnImage.color = Color.green;
+            }
+            else
+            {
+                btnImage.color = Color.red;
+            }
+
+            // РЈРІРµР»РёС‡РёРІР°РµРј РІС‹Р±СЂР°РЅРЅСѓСЋ РєРЅРѕРїРєСѓ
+            if (i == selectedIndex)
+            {
+                btnTransform.localScale = new Vector3(1.1f, 1.1f, 1f);
+            }
+            else
+            {
+                btnTransform.localScale = Vector3.one;
+            }
+        }
+
+        StartCoroutine(NextQuestionAfterDelay(1.5f));
+    }
+
+    IEnumerator NextQuestionAfterDelay(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
         currentQuestion++;
         ShowQuestion();
     }
 
     void ShowResult()
     {
-        questionPanel.SetActive(false); // скрываем панель с вопросами
-        resultPanel.SetActive(true);    // показываем результат
+        questionPanel.SetActive(false);
+        resultPanel.SetActive(true);
 
-        float maxScore = quizData.questions.Count * 30f; // если максимум за ответ — 30
-        float percentage = (totalScore / maxScore) * 100f;
+        string resultTextOutput = "РќРµС‚ РїРѕРґС…РѕРґСЏС‰РµРіРѕ СЂРµР·СѓР»СЊС‚Р°С‚Р°";
 
-        string resultTextOutput = "Нет подходящего результата";
-
-        // Найти лучший результат
         QuizData.ResultOutcome bestFit = null;
         foreach (var outcome in quizData.results)
         {
-            if (percentage >= outcome.minPercentage)
+            if (correctAnswers >= outcome.minCorrectAnswers)
             {
-                if (bestFit == null || outcome.minPercentage > bestFit.minPercentage)
+                if (bestFit == null || outcome.minCorrectAnswers > bestFit.minCorrectAnswers)
                     bestFit = outcome;
             }
         }
@@ -75,6 +129,6 @@ public class QuizManager : MonoBehaviour
         if (bestFit != null)
             resultTextOutput = bestFit.resultText;
 
-        resultText.text = resultTextOutput;
+        resultText.text = $"RДѓspunsuri corecte: {correctAnswers}/{quizData.questions.Count}\n\n{resultTextOutput}";
     }
 }

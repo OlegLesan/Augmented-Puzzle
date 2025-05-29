@@ -10,12 +10,12 @@ public class QuizData : ScriptableObject
     [System.Serializable]
     public class ResultOutcome
     {
-        [Range(0, 100)]
-        public int minPercentage; // Минимум процентов, чтобы получить этот результат
+        [Range(0, 10)]
+        public int minCorrectAnswers; // Минимум правильных ответов
         [TextArea]
         public string resultText;
     }
 
-    [Header("Результаты в зависимости от процентов")]
+    [Header("Результаты по количеству правильных ответов")]
     public List<ResultOutcome> results;
 }
