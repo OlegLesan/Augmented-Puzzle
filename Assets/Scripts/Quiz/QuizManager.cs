@@ -14,13 +14,15 @@ public class QuizManager : MonoBehaviour
     public GameObject questionPanel;
     public GameObject resultPanel;
 
+    public QuizUIController quizUIController;
+
     private int currentQuestion = 0;
     private int correctAnswers = 0;
     private bool isAnswering = false;
 
-    private Color[] originalButtonColors; // сохраняем цвета из инспектора
+    private Color[] originalButtonColors;
 
-    void Start()
+    void Awake()
     {
         // Сохраняем начальные цвета кнопок
         originalButtonColors = new Color[answerButtons.Length];
@@ -28,9 +30,29 @@ public class QuizManager : MonoBehaviour
         {
             originalButtonColors[i] = answerButtons[i].GetComponent<Image>().color;
         }
+    }
 
+    void Start()
+    {
         resultPanel.SetActive(false);
         questionPanel.SetActive(true);
+        ShowQuestion();
+    }
+
+    public void RestartQuiz()
+    {
+        currentQuestion = 0;
+        correctAnswers = 0;
+        resultPanel.SetActive(false);
+        questionPanel.SetActive(true);
+
+        for (int i = 0; i < answerButtons.Length; i++)
+        {
+            answerButtons[i].GetComponent<Image>().color = originalButtonColors[i];
+            answerButtons[i].transform.localScale = Vector3.one;
+            answerButtons[i].onClick.RemoveAllListeners();
+        }
+
         ShowQuestion();
     }
 
@@ -52,7 +74,6 @@ public class QuizManager : MonoBehaviour
             TMP_Text txt = answerButtons[i].GetComponentInChildren<TMP_Text>();
             txt.text = q.answers[i];
 
-            // Сброс цвета и масштаба
             answerButtons[i].GetComponent<Image>().color = originalButtonColors[i];
             answerButtons[i].transform.localScale = Vector3.one;
 
@@ -78,25 +99,15 @@ public class QuizManager : MonoBehaviour
             Image btnImage = answerButtons[i].GetComponent<Image>();
             Transform btnTransform = answerButtons[i].transform;
 
-            // Подсветка правильной/неправильной
             if (i == q.correctAnswerIndex)
-            {
                 btnImage.color = Color.green;
-            }
             else
-            {
                 btnImage.color = Color.red;
-            }
 
-            // Увеличиваем выбранную кнопку
             if (i == selectedIndex)
-            {
                 btnTransform.localScale = new Vector3(1.1f, 1.1f, 1f);
-            }
             else
-            {
                 btnTransform.localScale = Vector3.one;
-            }
         }
 
         StartCoroutine(NextQuestionAfterDelay(1.5f));

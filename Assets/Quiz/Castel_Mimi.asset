@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a801dbe2125ac244aa9ffb48bbd49b49, type: 3}
+  m_Name: Castel_Mimi
+  m_EditorClassIdentifier: 
+  quizName: Castel_Mimi
+  questions:
+  - questionText: 1. Ce este Castel Mimi?
+    answers:
+    - "A. O \u0219coal\u0103 mare"
+    - "B. Un castel adev\u0103rat unde locuie\u0219te un rege"
+    - "C. O vin\u0103rie care arat\u0103 ca un castel"
+    - "D. Un loc unde se face vin \u0219i arat\u0103 ca un castel"
+    correctAnswerIndex: 3
+  - questionText: "2. \xCEn ce \u021Bar\u0103 se afl\u0103 Castel Mimi?"
+    answers:
+    - "A. Rom\xE2nia"
+    - B. Moldova
+    - "C. Fran\u021Ba"
+    - D. Italia
+    correctAnswerIndex: 1
+  - questionText: "3. Cum se nume\u0219te persoana care a construit Castel Mimi?"
+    answers:
+    - A. Constantin Mimi
+    - "B. \u0218tefan cel Mare"
+    - C. Regele Mihai
+    - D. Alexandru
+    correctAnswerIndex: 0
+  - questionText: 4. Ce culoare are castelul Mimi?
+    answers:
+    - A. Verde
+    - B. Bej deschis (culoarea nisipului)
+    - C. Albastru
+    - D. Mov
+    correctAnswerIndex: 1
+  - questionText: "5. Ce se produce la vin\u0103ria Castel Mimi?"
+    answers:
+    - A. Lapte
+    - B. Miere
+    - C. Vin
+    - "D. P\xE2ine"
+    correctAnswerIndex: 1
+  - questionText: "6. Ce putem vedea \xEEn curtea Castelului Mimi?"
+    answers:
+    - "A. C\u0103lu\u021Bi \u0219i oi"
+    - "B. Gr\u0103dini frumoase cu flori \u0219i f\xE2nt\xE2ni"
+    - C. Un teren de fotbal
+    - "D. Un parc de distrac\u021Bii"
+    correctAnswerIndex: 1
+  - questionText: "7. Castel Mimi este \u0219i un loc unde vin..."
+    answers:
+    - "A. Turi\u0219ti s\u0103 viziteze \u0219i s\u0103 se bucure de frumuse\u021Bea
+      locului"
+    - "B. Oamenii s\u0103 se joace fotbal"
+    - "C. Copiii s\u0103 \xEEnve\u021Be matematic\u0103"
+    - "D. Pilo\u021Bii s\u0103 zboare cu avionul"
+    correctAnswerIndex: 0
+  - questionText: "8. Ce po\u021Bi face \xEEntr-o vizit\u0103 la Castel Mimi?"
+    answers:
+    - "A. Dormi toat\u0103 ziua"
+    - "B. Vezi beciurile cu butoaie \u0219i gr\u0103dinile"
+    - C. Mergi cu trenul
+    - D. Faci sporturi periculoase
+    correctAnswerIndex: 1
+  - questionText: "9. \xCEn ce an a fost \xEEnceput\u0103 construc\u021Bia Castelului
+      Mimi? "
+    answers:
+    - A. 2000
+    - B. 1700
+    - C. 1893
+    - D. 1400
+    correctAnswerIndex: 1
+  - questionText: "10. Ce este special la vin\u0103ria Castel Mimi?"
+    answers:
+    - "A. Este cea mai mic\u0103 vin\u0103rie"
+    - "B. Este una dintre cele mai frumoase vin\u0103rii din lume"
+    - C. Are un lac mare pentru pescuit
+    - D. Face doar compot
+    correctAnswerIndex: 1
+  results:
+  - minCorrectAnswers: 0
+    resultText: "Hai s\u0103 mai \xEEnv\u0103\u021B\u0103m \xEEmpreun\u0103 despre
+      Castel Mimi!"
+  - minCorrectAnswers: 3
+    resultText: "E\u0219ti pe drumul cel bun!"
+  - minCorrectAnswers: 6
+    resultText: "Foarte bine! Mai cite\u0219te un pic \u0219i devii expert."
+  - minCorrectAnswers: 9
+    resultText: "Super de\u0219tept! Cuno\u0219ti bine Castel Mimi!"

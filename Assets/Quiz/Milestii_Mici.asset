@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a801dbe2125ac244aa9ffb48bbd49b49, type: 3}
+  m_Name: Milestii_Mici
+  m_EditorClassIdentifier: 
+  quizName: Milestii_Mici
+  questions:
+  - questionText: "1. Unde se afl\u0103 vin\u0103ria Mile\u0219tii Mici?"
+    answers:
+    - "A. \xCEn p\u0103dure"
+    - "B. Sub p\u0103m\xE2nt"
+    - C. Pe un munte
+    - "D. Pe ap\u0103"
+    correctAnswerIndex: 1
+  - questionText: "2. Ce este p\u0103strat \xEEn Mile\u0219tii Mici?"
+    answers:
+    - "A. Juc\u0103rii"
+    - "B. C\u0103r\u021Bi "
+    - C. Vin
+    - "D. Ghea\u021B\u0103"
+    correctAnswerIndex: 1
+  - questionText: "3. Cum se numesc drumurile subterane din Mile\u0219tii Mici?"
+    answers:
+    - "A. Autostr\u0103zi"
+    - "B. Str\u0103zi de ciocolat\u0103"
+    - 'C. Galerii '
+    - D. Tuneluri magice
+    correctAnswerIndex: 2
+  - questionText: "4. C\xE2t de lungi sunt galeriile de la Mile\u0219tii Mici?"
+    answers:
+    - A. 2 metri
+    - B. 200 metri
+    - 'C. Peste 200 kilometri '
+    - D. 2 kilometri
+    correctAnswerIndex: 2
+  - questionText: "5. Ce record mondial de\u021Bine Mile\u0219tii Mici?"
+    answers:
+    - A. Cel mai mare castel
+    - "B. Cea mai mare colec\u021Bie de vinuri"
+    - "C. Cea mai mare \xEEnghe\u021Bat\u0103"
+    - D. Cel mai lung tobogan
+    correctAnswerIndex: 1
+  - questionText: "6. Ce po\u021Bi vedea pe pere\u021Bi \xEEn galeriile de vin? "
+    answers:
+    - A. Desene animate
+    - 'B. Rafturi cu sticle de vin '
+    - C. Oglinzi
+    - D. Stele
+    correctAnswerIndex: 1
+  - questionText: "7. De ce este vinul p\u0103strat sub p\u0103m\xE2nt?"
+    answers:
+    - "A. Ca s\u0103 fie fericit"
+    - "B. Ca s\u0103 doarm\u0103 bine"
+    - "C. Ca s\u0103 fie r\u0103coros \u0219i protejat "
+    - "D. Ca s\u0103 se joace"
+    correctAnswerIndex: 2
+  - questionText: "8. Cum este aerul \xEEn galeriile de la Mile\u0219tii Mici?"
+    answers:
+    - "A. Cald \u0219i uscat"
+    - "B. Umed \u0219i r\u0103coros "
+    - C. Foarte cald
+    - D. Plin de fum
+    correctAnswerIndex: 1
+  - questionText: 9. Ce culoare pot avea sticlele de vin?
+    answers:
+    - "A. Alb\u0103, verde sau maro"
+    - B. Roz, galben, mov
+    - "C. Albastr\u0103, ro\u0219ie, gri"
+    - "D. Transparent\u0103 ca ghea\u021Ba"
+    correctAnswerIndex: 0
+  - questionText: "10. Cum se ajunge \xEEn Mile\u0219tii Mici?"
+    answers:
+    - A. Cu barca
+    - 'B. Cu racheta '
+    - "C. Cu ma\u0219ina sau autocarul"
+    - D. Cu patinele
+    correctAnswerIndex: 2
+  results:
+  - minCorrectAnswers: 9
+    resultText: "Bravo! Ai aflat totul despre Mile\u0219tii Mici. Poate \xEEntr-o
+      zi vei lucra acolo \u0219i vei avea grij\u0103 de colec\u021Bia de vinuri!"
+  - minCorrectAnswers: 6
+    resultText: "\u0218tii multe despre aceast\u0103 vin\u0103rie uimitoare. Mai
+      cite\u0219te un pic \u0219i vei deveni un adev\u0103rat ghid turistic!"
+  - minCorrectAnswers: 3
+    resultText: "Ai aflat c\xE2teva lucruri interesante, dar mai e loc de \xEEnv\u0103\u021Bat.
+      Poate o vizit\u0103 la Mile\u0219tii Mici te va ajuta!"
+  - minCorrectAnswers: 0
+    resultText: "Nu-i nimic, nu to\u021Bi \u0219tiu despre vin\u0103rii. Acum e un
+      moment bun s\u0103 \xEEnve\u021Bi! Poate ai chef de o aventur\u0103 subteran\u0103?"
