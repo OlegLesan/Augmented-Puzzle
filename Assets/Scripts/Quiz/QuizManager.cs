@@ -99,10 +99,14 @@ public class QuizManager : MonoBehaviour
             Image btnImage = answerButtons[i].GetComponent<Image>();
             Transform btnTransform = answerButtons[i].transform;
 
+            // Цвета из hex в Unity Color
+            Color correctColor = new Color32(0x6F, 0xCB, 0x52, 0xFF); // #6FCB52
+            Color wrongColor = new Color32(0xCA, 0x52, 0x52, 0xFF);   // #CA5252
+
             if (i == q.correctAnswerIndex)
-                btnImage.color = Color.green;
+                btnImage.color = correctColor;
             else
-                btnImage.color = Color.red;
+                btnImage.color = wrongColor;
 
             if (i == selectedIndex)
                 btnTransform.localScale = new Vector3(1.1f, 1.1f, 1f);

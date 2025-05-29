@@ -14,81 +14,85 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quizName: Cricova
   questions:
-  - questionText: 1. Ce este Cricova?
+  - questionText: "1. Unde este situat\u0103 Vin\u0103ria Cricova?"
     answers:
-    - "A. O p\u0103dure"
-    - "B. Un parc de distrac\u021Bii"
-    - "C. O vin\u0103rie sub p\u0103m\xE2nt"
-    - "D. Un magazin de juc\u0103rii"
+    - "A. La sud de Chi\u0219in\u0103u"
+    - "B. \xCEn nordul Moldovei"
+    - "C. \xCEn centrul ora\u0219ului Chi\u0219in\u0103u"
+    - "D. La nord de Chi\u0219in\u0103u"
+    correctAnswerIndex: 3
+  - questionText: 2. Ce este unic la galeriile Cricova?
+    answers:
+    - "A. Sunt construite din marmur\u0103"
+    - "B. Au fost transformate \xEEn hotel"
+    - "C. Se afl\u0103 sub p\u0103m\xE2nt \u0219i formeaz\u0103 o re\u021Bea de peste
+      120 km"
+    - D. Sunt pictate manual
     correctAnswerIndex: 2
-  - questionText: "2. Unde se afl\u0103 Vin\u0103ria Cricova?"
+  - questionText: "3. Ce b\u0103utur\u0103 este produs\u0103 \xEEn special la Cricova?"
     answers:
-    - "A. \xCEntr-o pe\u0219ter\u0103 din mun\u021Bi"
-    - "B. \xCEn ora\u0219ul Cricova, aproape de Chi\u0219in\u0103u"
-    - "C. Pe o insul\u0103"
-    - "D. \xCEntr-un castel din Italia"
+    - "A. \u021Auica"
+    - "B. Bere artizanal\u0103"
+    - "C. Vin spumant \u0219i vinuri fine"
+    - D. Coniac
+    correctAnswerIndex: 2
+  - questionText: "4. Cum se nume\u0219te procesul tradi\u021Bional folosit la Cricova
+      pentru spumant?"
+    answers:
+    - A. Pasteurizare
+    - "B. Metoda clasic\u0103 (champenoise)"
+    - "C. Filtrare dubl\u0103"
+    - D. Distilare
     correctAnswerIndex: 1
-  - questionText: "3. Ce se p\u0103streaz\u0103 \xEEn tunelurile de la Cricova?"
+  - questionText: "5. Cricova este cunoscut\u0103 interna\u021Bional pentru\u2026"
     answers:
-    - "A. Fructe \u0219i legume"
-    - "B. Juc\u0103rii \u0219i dulciuri"
-    - C. Sticle de vin
-    - "D. P\u0103s\u0103ri \u0219i animale"
+    - A. Export de butoaie
+    - "B. Cursuri de viticultur\u0103"
+    - " C. Vinuri premiate \u0219i colec\u021Bii rare"
+    - "D. Sta\u021Biune turistic\u0103"
     correctAnswerIndex: 2
-  - questionText: "4. C\xE2t de lungi sunt tunelurile de la Cricova?"
+  - questionText: "6. Care este temperatura constant\u0103 \xEEn galeriile Cricova?"
     answers:
-    - A. 5 metri
-    - B. 100 metri
-    - C. 120 kilometri
-    - D. 3 kilometri
-    correctAnswerIndex: 2
-  - questionText: "5. Cum te po\u021Bi plimba prin Cricova?"
-    answers:
-    - A. Cu trotineta
-    - B. Cu bicicleta
-    - "C. Cu ma\u0219inu\u021Be speciale"
-    - D. Pe cal
-    correctAnswerIndex: 2
-  - questionText: "6. Ce este \u201Ecolec\u021Bia de aur\u201D de la Cricova?"
-    answers:
-    - A. Un dulap cu bijuterii
-    - "B. O camer\u0103 plin\u0103 cu juc\u0103rii"
-    - "C. O colec\u021Bie rar\u0103 de vinuri"
-    - D. Un loc cu stele aurii
-    correctAnswerIndex: 2
-  - questionText: "7. Ce temperatur\u0103 este \xEEn tunelurile de la Cricova?"
-    answers:
-    - A. Ca la soare, foarte cald
-    - B. Aproximativ 12 grade tot anul
-    - C. Foarte frig, ca iarna
-    - "D. Fierbinte ca \xEEn de\u0219ert"
+    - "A. 20\xB0C"
+    - "B. 12-14\xB0C"
+    - "C. 5\xB0C"
+    - "D. 0\xB0C"
     correctAnswerIndex: 1
-  - questionText: "8. Ce putem \xEEnv\u0103\u021Ba vizit\xE2nd Cricova?"
+  - questionText: "7. C\xE2t de lung\u0103 este re\u021Beaua de galerii subterane
+      de la Cricova?"
     answers:
-    - "A. S\u0103 g\u0103tim dulciuri"
-    - "B. Despre istoria vinului \u0219i cum se p\u0103streaz\u0103"
-    - "C. S\u0103 desen\u0103m animale"
-    - "D. S\u0103 ne juc\u0103m cu robo\u021Bi"
-    correctAnswerIndex: 1
-  - questionText: 9. Ce culoare pot avea vinurile de la Cricova?
-    answers:
-    - "A. Verde \u0219i albastru"
-    - "B. Ro\u0219u, alb \u0219i roz"
-    - "C. Portocaliu \u0219i negru"
-    - D. Numai transparent
-    correctAnswerIndex: 1
-  - questionText: "10. Cine a vizitat Cricova dintre oamenii importan\u021Bi?"
-    answers:
-    - A. Un astronaut
-    - B. Un magician
-    - "C. Vladimir Putin \u0219i Angela Merkel"
-    - D. Un fotbalist celebru
+    - A. 50 km
+    - B. 80 km
+    - C. Peste 120 km
+    - D. 300 km
     correctAnswerIndex: 2
+  - questionText: "8.Care este capacitatea total\u0103 de stocare a vinurilor \xEEn
+      beciurile Cricova?"
+    answers:
+    - A. 10 milioane de litri
+    - B. 20 milioane de litri
+    - B. 30 milioane de litri
+    - D. 40 milioane de litri
+    correctAnswerIndex: 3
+  - questionText: "9. Ce se poate vizita \xEEn galeriile Cricova?"
+    answers:
+    - A. Doar magazinul
+    - B. Doar sala de fermentare
+    - "C. Galeriile, s\u0103li de degustare \u0219i colec\u021Bia de vinuri"
+    - "D. Doar sec\u021Bia de \xEEmbuteliere"
+    correctAnswerIndex: 2
+  - questionText: "10.\xCEn ce an a fost fondat\u0103 Vin\u0103ria Cricova?"
+    answers:
+    - A. 1947
+    - B. 1952
+    - C. 1960
+    - D. 1971
+    correctAnswerIndex: 1
   results:
   - minCorrectAnswers: 9
     resultText: "E\u0219ti un mic explorator Cricova!"
   - minCorrectAnswers: 7
-    resultText: "Cuno\u0219ti multe lucruri interesante despre Cricova. Mai cite\u0219te
+    resultText: "Cuno\u0219ti multe lucruri interesante despre Cricova. \xCEnc\u0103
       un pic \u0219i o s\u0103 devii expert!"
   - minCorrectAnswers: 4
     resultText: "Se vede c\u0103 \u021Bi-a pl\u0103cut testul. Mai f\u0103 o vizit\u0103

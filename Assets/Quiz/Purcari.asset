@@ -87,7 +87,7 @@ MonoBehaviour:
   results:
   - minCorrectAnswers: 9
     resultText: "Bravo! E\u0219ti un adev\u0103rat expert \xEEn Vin\u0103ria Purcari!
-      Ai \xEEnv\u0103\u021Bat multe \u0219i ai r\u0103spuns aproape perfect! "
+      Ai \xEEnv\u0103\u021Bat multe \u0219i ai r\u0103spuns perfect! "
   - minCorrectAnswers: 6
     resultText: "Foarte bine! Mai ai pu\u021Bin de \xEEnv\u0103\u021Bat, dar ai f\u0103cut
       o treab\u0103 excelent\u0103! Continu\u0103 a\u0219a!"
