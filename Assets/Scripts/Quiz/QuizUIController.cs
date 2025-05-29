@@ -1,13 +1,13 @@
-using UnityEngine;
+п»їusing UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class QuizUIController : MonoBehaviour
 {
-    [Header("Canvas-ы")]
+    [Header("Canvas-С‹")]
     public GameObject canvasSelection;
     public GameObject canvasQuestions;
 
-    [Header("Объекты с тестами")]
+    [Header("РћР±СЉРµРєС‚С‹ СЃ С‚РµСЃС‚Р°РјРё")]
     public GameObject[] quizObjects;
 
     private GameObject currentActiveQuiz;
@@ -16,7 +16,7 @@ public class QuizUIController : MonoBehaviour
     {
         if (index < 0 || index >= quizObjects.Length)
         {
-            Debug.LogError("Неверный индекс теста: " + index);
+            Debug.LogError("РќРµРІРµСЂРЅС‹Р№ РёРЅРґРµРєСЃ С‚РµСЃС‚Р°: " + index);
             return;
         }
 
@@ -38,14 +38,8 @@ public class QuizUIController : MonoBehaviour
 
     public void ReturnToSelection()
     {
-        if (currentActiveQuiz != null)
-        {
-            currentActiveQuiz.SetActive(false);
-            currentActiveQuiz = null;
-        }
-
-        canvasQuestions.SetActive(false);
-        canvasSelection.SetActive(true);
+        // рџ”Ѓ РџРµСЂРµР·Р°РїСѓСЃРєР°РµРј С‚РµРєСѓС‰СѓСЋ СЃС†РµРЅСѓ
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void LoadSceneByName(string sceneName)
