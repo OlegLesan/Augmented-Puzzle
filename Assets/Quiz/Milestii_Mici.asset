@@ -27,7 +27,7 @@ MonoBehaviour:
     - "B. C\u0103r\u021Bi "
     - C. Vin
     - "D. Ghea\u021B\u0103"
-    correctAnswerIndex: 1
+    correctAnswerIndex: 2
   - questionText: "3. Cum se numesc drumurile subterane din Mile\u0219tii Mici?"
     answers:
     - "A. Autostr\u0103zi"

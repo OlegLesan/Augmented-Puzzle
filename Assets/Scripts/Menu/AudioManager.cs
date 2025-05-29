@@ -1,12 +1,19 @@
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.Video;
+using System.Collections.Generic;
 
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance { get; private set; }
 
-    public bool IsMuted { get; private set; } = false;
+    [Header("Mute")]
+    [SerializeField] private bool _isMuted = false;
+    public bool IsMuted => _isMuted;
+
+    [Header("SFX List")]
+    public List<AudioClip> sfxClips = new List<AudioClip>();
+
+    private AudioSource sfxSource;
 
     private void Awake()
     {
@@ -15,41 +22,54 @@ public class AudioManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
         Instance = this;
         DontDestroyOnLoad(gameObject);
+
+        sfxSource = gameObject.AddComponent<AudioSource>();
+        sfxSource.playOnAwake = false;
     }
 
     public void ToggleSound()
     {
-        IsMuted = !IsMuted;
+        _isMuted = !_isMuted;
         ApplyMute();
     }
 
     public void ApplyMute()
     {
-        AudioListener.volume = IsMuted ? 0f : 1f;
+        AudioListener.volume = _isMuted ? 0f : 1f;
 
-        // Mute AudioSources
         foreach (var audioSource in FindObjectsOfType<AudioSource>())
         {
-            audioSource.mute = IsMuted;
+            audioSource.mute = _isMuted;
         }
 
-        // Mute VideoPlayers
         foreach (var vp in FindObjectsOfType<VideoPlayer>())
         {
             int trackCount = vp.audioTrackCount;
 
             for (ushort i = 0; i < trackCount; i++)
             {
-                vp.SetDirectAudioMute(i, IsMuted);
+                vp.SetDirectAudioMute(i, _isMuted);
             }
 
-            // если у него есть AudioSource, тоже мьютим
             if (vp.GetTargetAudioSource(0) != null)
             {
-                vp.GetTargetAudioSource(0).mute = IsMuted;
+                vp.GetTargetAudioSource(0).mute = _isMuted;
             }
+        }
+    }
+
+    public void PlaySFXByIndex(int index)
+    {
+        if (_isMuted || sfxClips == null || index < 0 || index >= sfxClips.Count)
+            return;
+
+        AudioClip clip = sfxClips[index];
+        if (clip != null)
+        {
+            sfxSource.PlayOneShot(clip);
         }
     }
 }

@@ -18,8 +18,8 @@ MonoBehaviour:
     answers:
     - "A. O \u0219coal\u0103 mare"
     - "B. Un castel adev\u0103rat unde locuie\u0219te un rege"
-    - "C. O vin\u0103rie care arat\u0103 ca un castel"
-    - "D. Un loc unde se face vin \u0219i arat\u0103 ca un castel"
+    - 'C. Un muzeu '
+    - "D. O vin\u0103rie"
     correctAnswerIndex: 3
   - questionText: "2. \xCEn ce \u021Bar\u0103 se afl\u0103 Castel Mimi?"
     answers:
