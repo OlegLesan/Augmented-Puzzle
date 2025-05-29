@@ -14,77 +14,81 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quizName: Castel_Mimi
   questions:
-  - questionText: 1. Ce este Castel Mimi?
+  - questionText: "1. \xCEn ce an a fost fondat Castel Mimi?"
     answers:
-    - "A. O \u0219coal\u0103 mare"
-    - "B. Un castel adev\u0103rat unde locuie\u0219te un rege"
-    - 'C. Un muzeu '
-    - "D. O vin\u0103rie"
-    correctAnswerIndex: 3
-  - questionText: "2. \xCEn ce \u021Bar\u0103 se afl\u0103 Castel Mimi?"
-    answers:
-    - "A. Rom\xE2nia"
-    - B. Moldova
-    - "C. Fran\u021Ba"
-    - D. Italia
+    - A. 1889
+    - B. 1893
+    - C. 1901
+    - D. 1910
     correctAnswerIndex: 1
-  - questionText: "3. Cum se nume\u0219te persoana care a construit Castel Mimi?"
+  - questionText: 2. Unde este situat Castel Mimi?
     answers:
-    - A. Constantin Mimi
-    - "B. \u0218tefan cel Mare"
-    - C. Regele Mihai
-    - D. Alexandru
+    - A. Soroca
+    - B. Ungheni
+    - C. Bulboaca
+    - "D. Chi\u0219in\u0103u"
+    correctAnswerIndex: 2
+  - questionText: "3. Care este capacitatea de stocare a vinurilor \xEEn beciurile
+      Castel Mimi?"
+    answers:
+    - A. 100.000 litri
+    - B. 200.000 litri
+    - C. 300.000 litri
+    - D. 500.000 litri
+    correctAnswerIndex: 2
+  - questionText: 4. Ce rol istoric a avut fondatorul Castelului Mimi, Constantin
+      Mimi?
+    answers:
+    - "A. Prim-ministru al Rom\xE2niei"
+    - "B. Pre\u0219edintele Parlamentului Basarabiei"
+    - C. Ultimul guvernator al Basarabiei
+    - "D. Ambasador al Moldovei \xEEn Fran\u021Ba"
+    correctAnswerIndex: 2
+  - questionText: "5. Ce eveniment interna\u021Bional important a fost g\u0103zduit
+      la Castel Mimi \xEEn 2023?"
+    answers:
+    - A. Summitul NATO
+    - "B. Reuniunea Comunit\u0103\u021Bii Politice Europene"
+    - C. Festivalul Vinului European
+    - "D. Conferin\u021Ba ONU pentru Clim\u0103"
+    correctAnswerIndex: 1
+  - questionText: "6. Ce stil arhitectural caracterizeaz\u0103 Castel Mimi?"
+    answers:
+    - A. Baroc
+    - B. Neoclasic
+    - "C. Goticul t\xE2rziu"
+    - D. Art Nouveau
+    correctAnswerIndex: 1
+  - questionText: "7. C\xE2te hectare de vi\u021B\u0103-de-vie de\u021Bine Castel
+      Mimi \xEEn prezent?"
+    answers:
+    - A. 50 ha
+    - B. 100 ha
+    - C. 150 ha
+    - D. 200 ha
     correctAnswerIndex: 0
-  - questionText: 4. Ce culoare are castelul Mimi?
+  - questionText: "8. Ce facilit\u0103\u021Bi turistice ofer\u0103 Castel Mimi?"
     answers:
-    - A. Verde
-    - B. Bej deschis (culoarea nisipului)
-    - C. Albastru
-    - D. Mov
-    correctAnswerIndex: 1
-  - questionText: "5. Ce se produce la vin\u0103ria Castel Mimi?"
-    answers:
-    - A. Lapte
-    - B. Miere
-    - C. Vin
-    - "D. P\xE2ine"
-    correctAnswerIndex: 1
-  - questionText: "6. Ce putem vedea \xEEn curtea Castelului Mimi?"
-    answers:
-    - "A. C\u0103lu\u021Bi \u0219i oi"
-    - "B. Gr\u0103dini frumoase cu flori \u0219i f\xE2nt\xE2ni"
-    - C. Un teren de fotbal
-    - "D. Un parc de distrac\u021Bii"
-    correctAnswerIndex: 1
-  - questionText: "7. Castel Mimi este \u0219i un loc unde vin..."
-    answers:
-    - "A. Turi\u0219ti s\u0103 viziteze \u0219i s\u0103 se bucure de frumuse\u021Bea
-      locului"
-    - "B. Oamenii s\u0103 se joace fotbal"
-    - "C. Copiii s\u0103 \xEEnve\u021Be matematic\u0103"
-    - "D. Pilo\u021Bii s\u0103 zboare cu avionul"
+    - "A. Hotel de 5 stele, restaurant, spa, s\u0103li de conferin\u021B\u0103"
+    - "B. Doar degust\u0103ri de vin"
+    - "C. Muzeu \u0219i galerie de art\u0103"
+    - D. Niciuna dintre cele de mai sus
     correctAnswerIndex: 0
-  - questionText: "8. Ce po\u021Bi face \xEEntr-o vizit\u0103 la Castel Mimi?"
+  - questionText: "9. Ce ini\u021Biativ\u0103 cultural\u0103 sus\u021Bine Castel
+      Mimi pentru promovarea artei \u0219i tradi\u021Biilor?"
     answers:
-    - "A. Dormi toat\u0103 ziua"
-    - "B. Vezi beciurile cu butoaie \u0219i gr\u0103dinile"
-    - C. Mergi cu trenul
-    - D. Faci sporturi periculoase
+    - A. Festivalul Etniilor
+    - B. Serile de film la castel
+    - C. Noaptea Galeriilor
+    - "D. Programul \u201EArt\u0103 \xEEn beci\u201D"
     correctAnswerIndex: 1
-  - questionText: "9. \xCEn ce an a fost \xEEnceput\u0103 construc\u021Bia Castelului
-      Mimi? "
+  - questionText: "10. Ce eveniment anual dedicat vinului ros\xE9 este organizat
+      la Castel Mimi?"
     answers:
-    - A. 2000
-    - B. 1700
-    - C. 1893
-    - D. 1400
-    correctAnswerIndex: 1
-  - questionText: "10. Ce este special la vin\u0103ria Castel Mimi?"
-    answers:
-    - "A. Este cea mai mic\u0103 vin\u0103rie"
-    - "B. Este una dintre cele mai frumoase vin\u0103rii din lume"
-    - C. Are un lac mare pentru pescuit
-    - D. Face doar compot
+    - A. Ziua Vinului
+    - "B. Ros\xE9 Day"
+    - C. Festivalul Vinului Nou
+    - "D. S\u0103rb\u0103toarea Toamnei"
     correctAnswerIndex: 1
   results:
   - minCorrectAnswers: 0

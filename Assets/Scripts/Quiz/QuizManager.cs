@@ -16,27 +16,21 @@ public class QuizManager : MonoBehaviour
 
     public QuizUIController quizUIController;
 
+    [Header("SFX Indices")]
+    public int correctAnswerSFXIndex = 0;
+    public int wrongAnswerSFXIndex = 1;
+    public int resultSFXIndex = 2;
+
     private int currentQuestion = 0;
     private int correctAnswers = 0;
     private bool isAnswering = false;
 
     private Color[] originalButtonColors;
+    private bool colorsInitialized = false;
 
-    void Awake()
+    void OnEnable()
     {
-        // Сохраняем начальные цвета кнопок
-        originalButtonColors = new Color[answerButtons.Length];
-        for (int i = 0; i < answerButtons.Length; i++)
-        {
-            originalButtonColors[i] = answerButtons[i].GetComponent<Image>().color;
-        }
-    }
-
-    void Start()
-    {
-        resultPanel.SetActive(false);
-        questionPanel.SetActive(true);
-        ShowQuestion();
+        RestartQuiz();
     }
 
     public void RestartQuiz()
@@ -45,6 +39,17 @@ public class QuizManager : MonoBehaviour
         correctAnswers = 0;
         resultPanel.SetActive(false);
         questionPanel.SetActive(true);
+
+        // ✅ Сохраняем оригинальные цвета ОДИН РАЗ — при первом запуске
+        if (!colorsInitialized)
+        {
+            originalButtonColors = new Color[answerButtons.Length];
+            for (int i = 0; i < answerButtons.Length; i++)
+            {
+                originalButtonColors[i] = answerButtons[i].GetComponent<Image>().color;
+            }
+            colorsInitialized = true;
+        }
 
         for (int i = 0; i < answerButtons.Length; i++)
         {
@@ -92,14 +97,23 @@ public class QuizManager : MonoBehaviour
         bool isCorrect = selectedIndex == q.correctAnswerIndex;
 
         if (isCorrect)
+        {
             correctAnswers++;
+            if (AudioManager.Instance != null)
+                AudioManager.Instance.PlaySFXByIndex(correctAnswerSFXIndex);
+        }
+        else
+        {
+            if (AudioManager.Instance != null)
+                AudioManager.Instance.PlaySFXByIndex(wrongAnswerSFXIndex);
+        }
 
         for (int i = 0; i < answerButtons.Length; i++)
         {
             Image btnImage = answerButtons[i].GetComponent<Image>();
             Transform btnTransform = answerButtons[i].transform;
 
-            // Цвета из hex в Unity Color
+            // Цвета из hex
             Color correctColor = new Color32(0x6F, 0xCB, 0x52, 0xFF); // #6FCB52
             Color wrongColor = new Color32(0xCA, 0x52, 0x52, 0xFF);   // #CA5252
 
@@ -145,5 +159,8 @@ public class QuizManager : MonoBehaviour
             resultTextOutput = bestFit.resultText;
 
         resultText.text = $"Răspunsuri corecte: {correctAnswers}/{quizData.questions.Count}\n\n{resultTextOutput}";
+
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.PlaySFXByIndex(resultSFXIndex);
     }
 }
