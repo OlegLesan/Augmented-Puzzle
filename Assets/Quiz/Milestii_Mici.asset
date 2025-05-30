@@ -37,8 +37,8 @@ MonoBehaviour:
     - C. 200 km
     - D. 250 km
     correctAnswerIndex: 2
-  - questionText: "4.Dezvoltarea unui puzzle interactiv de promovare a Republicii
-      Moldova cu implicarea realit\u0103\u0163ii augmentate"
+  - questionText: "4. C\xE2\u021Bi kilometri de galerii sunt folosi\u021Bi pentru
+      depozitarea \u0219i produc\u021Bia vinurilor?"
     answers:
     - A. 25 km
     - B. 40 km
